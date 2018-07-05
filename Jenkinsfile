@@ -2,17 +2,8 @@ pipeline {
   agent any
   stages {
     stage('print') {
-      parallel {
-        stage('print') {
-          steps {
-            echo 'hellow'
-          }
-        }
-        stage('') {
-          steps {
-            input(message: 'Hallo', id: 'TEST', ok: 'OKy', submitter: 'SubmitterText', submitterParameter: 'SubmitterParameterText')
-          }
-        }
+      steps {
+        echo 'hellow'
       }
     }
     stage('echo1') {
